@@ -10,12 +10,12 @@ public class MainActivity {
 	
 	public static void main(String[] args) {
 		boolean run = true;
-		
-		while(run)
+		int option = 10;
+		while(option != 0)
 		{
 			Menu.Display(""+((users.size()*100)/200.00)+"% user database filled!");
 			System.out.print("Enter your option: ");
-			int option = in.nextInt();
+			option = in.nextInt();
 			in.nextLine();
 			switch(option)
 			{
@@ -34,6 +34,11 @@ public class MainActivity {
 					break;
 				case 4:
 					Display();
+					break;
+				case 10:
+					break;
+				default: 
+					System.out.println("Wrong input, please try again");
 					break;
 			}
 		}
@@ -85,10 +90,25 @@ public class MainActivity {
 	}
 
 	private static void Display() {
+		if(users.size() == 0)
+		{
+			System.out.println("No Users Found");
+		}
+		int count = 0;
 		for(int i=0; i<users.size(); i++)
 		{
 			if(!users.get(i).deleted)
-			System.out.println(users.get(i));
+			{
+				System.out.println(users.get(i));
+			}
+			else
+			{
+				count++;
+			}
+		}
+		if(count > 0)
+		{
+			System.out.println("Deleted User count: "+count);
 		}
 	}
 	
