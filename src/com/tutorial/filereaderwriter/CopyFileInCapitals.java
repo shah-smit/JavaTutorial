@@ -1,9 +1,8 @@
-package com.tutorial.filereader;
+package com.tutorial.filereaderwriter;
 
-import java.io.FileNotFoundException;
+
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -33,6 +32,8 @@ public class CopyFileInCapitals {
 				pw.print(line);
 			}
 			pw.close();
+			in.close();
+			fw.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

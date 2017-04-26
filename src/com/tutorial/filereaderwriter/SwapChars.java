@@ -1,4 +1,4 @@
-package com.tutorial.filereader;
+package com.tutorial.filereaderwriter;
 
 public class SwapChars {
 
