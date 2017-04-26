@@ -1,6 +1,6 @@
-package com.tutorial.filereader;
+package com.tutorial.filereaderwriter;
 
-import java.io.*;
+
 
 public class PrintCountofChar {
 
