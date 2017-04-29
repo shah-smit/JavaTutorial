@@ -15,6 +15,7 @@ public class VectorConfuse {
 		Vector<Object> v = new Vector<Object>();
 		v.addElement("hello");
 		v.addElement(v);
+		v.addElement("Bye");
 		return v;
 	}
 
