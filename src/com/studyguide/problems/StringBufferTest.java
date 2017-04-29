@@ -36,6 +36,11 @@ public class StringBufferTest {
 		
 		if(s == sn) System.out.println("true"); else System.out.println("false");
 		if(sn == snw) System.out.println("true"); else System.out.println("false");
+		
+		int x = 0;
+		do{ x++; }
+		while(x < 10);
+		System.out.println(x);
 	
 	}
 

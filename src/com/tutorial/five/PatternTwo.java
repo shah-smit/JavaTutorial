@@ -1,6 +1,29 @@
 package com.tutorial.five;
 
+import java.util.Vector;
+
 public class PatternTwo {
+	
+	public static Vector<String> q(Vector<String> b){
+		Vector<String> a = new Vector<String>();
+		int small = b.get(0).length();
+		
+		for(int i=0; i<b.size(); i++)
+		{
+			if(small > b.get(i).length()){
+				small = b.get(i).length();
+			}
+		}
+		
+		for(int i=0; i<b.size(); i++)
+		{
+			if(small == b.get(i).length()){
+				b.add(b.get(i));
+			}
+		}
+		
+		return a;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
