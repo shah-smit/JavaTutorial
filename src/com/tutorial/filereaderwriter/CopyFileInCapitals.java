@@ -18,17 +18,18 @@ public class CopyFileInCapitals {
 		
 		try{
 		      String input = file1;
-		      String output = "newFileCaptial.txt";
+		      String output = "printt.txt";
 
 		      FileReader fr = new FileReader(input);
 		      FileWriter fw = new FileWriter(output);
 		      int t = fr.read();
 		      while(t != -1){
+		    	 System.out.println(t);
 		        if(t >=97 && t <=122)
 		        {
-		          fw.write(Character.toUpperCase((char)t));
+		          fw.write((int)Character.toUpperCase((char)t));
 		        }
-		        else fw.write((char)t);
+		        else fw.write(t);
 		        t=fr.read();
 		      }
 
