@@ -8,8 +8,14 @@ public class VectorConfuse {
 		{
 			System.out.println(v.elementAt(i));
 		}
+		
+		for(int i=0; i<v.size();i++)
+		{
+			System.out.println(v.elementAt(i));
+		}
 	}
 	
+
 	public static Vector<Object> confuse()
 	{
 		Vector<Object> v = new Vector<Object>();

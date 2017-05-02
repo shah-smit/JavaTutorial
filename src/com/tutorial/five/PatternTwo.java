@@ -6,7 +6,12 @@ public class PatternTwo {
 	
 	public static Vector<String> q(Vector<String> b){
 		Vector<String> a = new Vector<String>();
-		int small = b.get(0).length();
+		int small = 0;
+		
+		if(b.size() > 0){
+			small = b.get(0).length();
+		}
+		
 		
 		for(int i=0; i<b.size(); i++)
 		{
@@ -18,7 +23,7 @@ public class PatternTwo {
 		for(int i=0; i<b.size(); i++)
 		{
 			if(small == b.get(i).length()){
-				b.add(b.get(i));
+				a.add(b.get(i));
 			}
 		}
 		
