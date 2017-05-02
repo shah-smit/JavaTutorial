@@ -24,6 +24,22 @@ public class VectorMaze {
 		a.add("baa");
 		a.add("baa");
 		System.out.println(a.size());
+		System.out.println("-------------------");
+		Vector<Integer> vNew = new Vector<Integer>();
+		vNew.add(4);
+		vNew.add(5);
+		Integer x = vNew.get(0);
+		Integer y = vNew.get(1);
+		Integer z = new Integer(x + y);
+		vNew.add(z);
+		vNew.add(x+y);
+		vNew.add(vNew.get(0)+vNew.get(1));
+		//vNew.remove(1);
+		double avg = 0.0;
+		for(Integer i: vNew){
+			avg += i;
+		}
+		System.out.println(avg/vNew.size());
 	}
 
 }

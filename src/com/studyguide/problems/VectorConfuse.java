@@ -9,10 +9,9 @@ public class VectorConfuse {
 			System.out.println(v.elementAt(i));
 		}
 		
-		for(int i=0; i<v.size();i++)
-		{
-			System.out.println(v.elementAt(i));
-		}
+		v.set(3, "Ringo Start");
+		v.remove("John Lennon");
+		v.remove("George Harrison");
 	}
 	
 
