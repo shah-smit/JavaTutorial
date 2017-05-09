@@ -24,6 +24,15 @@ public class G {
 		ObjectInputStream z = new ObjectInputStream(new FileInputStream("fred")); 
 		Object x = z.readObject(); 
 		System.out.println(x); 
+		
+		double test = 8.9;
+		String testS = Double.toString(test);
+		System.out.println(testS);
+		
+		double[] arr = {1.0,2.0,3.0,4.0};
+		double[] arr1 = arr;
+		arr[2] *= arr[2]+1.0;
+		System.out.println(arr1[2]);
 	}
 	
 	public static void pb(int n){

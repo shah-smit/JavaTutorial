@@ -13,13 +13,14 @@ public class Cube extends Rectangle {
 	}
 	
 	public void dimensions(){
+		super.dimensions();
 		System.out.println("Height "+height);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Cube myCube = new Cube(2.0,2.0,2.0);
-		System.out.println(myCube.getSurfArea());
+		myCube.dimensions();
 	}
 
 }
