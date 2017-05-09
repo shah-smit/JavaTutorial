@@ -1,6 +1,8 @@
 package com.tutorial.methods;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Vector;
 
 public class MainActivity {
 
@@ -31,6 +33,70 @@ public class MainActivity {
 		
 
 		in.close();
+		System.out.println(a('a'));
+		
+		ArrayList<Integer> check = new ArrayList<Integer>();
+		check.add(10);
+		check.add(12);
+		check.add(13);
+		check.add(14);
+		check.add(15);
+		check.add(16);
+		check.add(17);
+		check.add(18);
+		check.add(19);
+		check.add(20);
+		System.out.println(binarySearch(check,20));
+		
+		try(Scanner sc = new Scanner(System.in)){
+			try{
+				System.out.println();
+			}
+			finally{
+				sc.close();
+			}
+		}
+		finally{}
+	}
+	
+	public static boolean binarySearch(ArrayList<Integer> a, int thing)
+	{
+		boolean thingFound = false;
+		int len = a.size();
+
+		int upperBound = len;
+		int lowerBound = 0;
+		
+		while(!thingFound)
+		{
+			if(upperBound <= lowerBound)
+			{
+				break;
+			}
+
+			int midPoint = (lowerBound + upperBound) / 2;
+			
+			if(thing < a.get(midPoint))
+			{
+				upperBound = midPoint - 1;
+			}
+			
+			else if(thing > a.get(midPoint))
+			{
+				lowerBound = midPoint + 1;
+			}
+
+			else if(thing == a.get(midPoint))
+			{
+				thingFound = true;
+			}
+		}
+		return thingFound;
+	}
+	
+	public static char a(int x)
+	{
+		return (char)(x+1);
 	}
 	
 	public static boolean isEven(int value)
