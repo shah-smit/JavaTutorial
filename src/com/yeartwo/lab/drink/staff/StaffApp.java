@@ -1,4 +1,4 @@
-package com.yeartwo.lab.staff;
+package com.yeartwo.lab.drink.staff;
 
 public class StaffApp {
 

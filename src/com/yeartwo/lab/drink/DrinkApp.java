@@ -1,4 +1,5 @@
-package com.yeartwo.lab;
+package com.yeartwo.lab.drink;
+
 
 public class DrinkApp {
 
