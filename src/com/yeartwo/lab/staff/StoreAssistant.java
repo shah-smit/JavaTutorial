@@ -1,4 +1,4 @@
-package com.yeartwo.lab.drink.staff;
+package com.yeartwo.lab.staff;
 
 public class StoreAssistant extends Staff {
 	
