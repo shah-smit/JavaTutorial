@@ -3,11 +3,13 @@ package simpleobjects;
 
 public class VerticalBounceDrop extends Drop {
 	private boolean goUp;
+	private boolean goLeft;
 	
 	public VerticalBounceDrop(int xpos, int ypos, int xvel, int yvel, int size) {
 
 		super(xpos, ypos, xvel, yvel, size);
 		goUp = false;
+		goLeft = false;
 	}
 
 	public void move(int width, int height) {
@@ -25,8 +27,7 @@ public class VerticalBounceDrop extends Drop {
 			xpos = xpos - xvel;
 			ypos = ypos - yvel;
 		}
-		
-		if(!goUp)
+		else
 		{
 			xpos = xpos + xvel;
 			ypos = ypos + yvel;
