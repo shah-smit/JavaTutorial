@@ -14,6 +14,7 @@ public class HalfVerticalBounceDrop extends Drop {
 	public void move(int width, int height) {
 		
 			if(ypos == height){
+				goUp = true;
 				
 				if(halfHeight == 0){
 					previousHalf = halfHeight = height/2;
@@ -21,11 +22,11 @@ public class HalfVerticalBounceDrop extends Drop {
 				else{
 					previousHalf =  previousHalf/2;
 					
-					if(previousHalf+halfHeight < height) {
+					if((previousHalf+halfHeight) < height) {
 						halfHeight = previousHalf+halfHeight;
 					}
 				}
-				goUp = true;
+				
 			}
 			
 			if(ypos == halfHeight)
