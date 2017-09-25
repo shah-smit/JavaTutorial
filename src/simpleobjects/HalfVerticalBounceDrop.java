@@ -3,6 +3,7 @@ package simpleobjects;
 public class HalfVerticalBounceDrop extends Drop {
 	private boolean goUp;
 	private int halfHeight = 0;
+	private int previousHalf = 0;
 	
 	public HalfVerticalBounceDrop(int xpos, int ypos, int xvel, int yvel, int size) {
 
@@ -11,42 +12,29 @@ public class HalfVerticalBounceDrop extends Drop {
 	}
 
 	public void move(int width, int height) {
-		System.out.println("--"+ypos+"--");
-		//A
-		
 		
 			if(ypos == height){
-				//AA
 				if(halfHeight == 0){
-					System.out.println("halfHeight == 0");
-					 halfHeight = height/2;
-					 System.out.println("halfHeight: "+halfHeight);
+					previousHalf = halfHeight = height/2;
 				}
-				//AAA
 				else{
-					int half =  (halfHeight/2);
+					int half =  previousHalf/2;
+					previousHalf = half;
 					if(half+halfHeight < height)  halfHeight = half+halfHeight;
-					
-					System.out.println("halfHeight: "+halfHeight);
-				} 
+				}
 				goUp = true;
 			}
 			
-			//B
 			if(ypos == halfHeight)
 			{
-				System.out.println("halfHeight: ypos == halfHeight");
-				System.out.println("halfHeight: "+halfHeight);
 				goUp = false;
 			}
 			
-			//C
 			if(goUp)
 			{
 				ypos = ypos - yvel;
 			}
 			
-			//D
 			if(!goUp)
 			{
 				ypos = ypos + yvel;
