@@ -2,13 +2,15 @@ package simpleobjects;
 
 public class HalfVerticalBounceDrop extends Drop {
 	private boolean goUp;
-	private int halfHeight = 0;
-	private int previousHalf = 0;
+	private int halfHeight;
+	private int previousHalf;
 	
 	public HalfVerticalBounceDrop(int xpos, int ypos, int xvel, int yvel, int size) {
 
 		super(xpos, ypos, xvel, yvel, size);
 		goUp = false;
+		halfHeight = 0;
+		previousHalf = 0;
 	}
 
 	public void move(int width, int height) {
