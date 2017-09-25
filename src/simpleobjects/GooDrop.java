@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 public class GooDrop extends Goo { // B
 
-	HalfVerticalBounceDrop drop;
+	VerticalBounceDrop drop;
 
 	public GooDrop(int width, int height) { // C
 
@@ -17,7 +17,7 @@ public class GooDrop extends Goo { // B
 		int yvel = 1;
 		int size = 10;
 
-		drop = new HalfVerticalBounceDrop(xpos, ypos, xvel, yvel, size); 
+		drop = new VerticalBounceDrop(xpos, ypos, xvel, yvel, size); 
 	}
 
 	public void draw(Graphics g) { // D
