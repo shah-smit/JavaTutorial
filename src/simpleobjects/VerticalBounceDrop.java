@@ -1,21 +1,22 @@
 package simpleobjects;
 
+import java.awt.Color;
 
-public class VerticalBounceDrop extends Drop {
+public class VerticalBounceDrop extends CustomColorDrop {
 	private boolean goUp;
 	
-	public VerticalBounceDrop(int xpos, int ypos, int xvel, int yvel, int size) {
+	public VerticalBounceDrop(int xpos, int ypos, int xvel, int yvel, int size,Color color) {
 
-		super(xpos, ypos, xvel, yvel, size);
+		super(xpos, ypos, xvel, yvel, size,color);
 		goUp = false;
 	}
 
 	public void move(int width, int height) {
 		
-		if(ypos == height){
+		if(ypos >= height){
 			goUp = true;
 		}
-		if(ypos == 0)
+		if(ypos <= 0)
 		{
 			goUp = false;
 		}

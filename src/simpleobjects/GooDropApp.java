@@ -3,10 +3,10 @@ package simpleobjects;
 public class GooDropApp {
 	
 	public static void main(String[] args) {
-		
-		int width = 800;
-		int height = 500;
-		GooDrop gd = new GooDrop(width, height);
+
+		int width = 1400;
+		int height = 900;
+		GooDrops gd = new GooDrops(width, height);
 		gd.smooth();
 		gd.go();
 	}
