@@ -1,8 +1,6 @@
 package simpleobjects;
 
 import goo.Goo; // A
-
-import java.awt.Color;
 import java.awt.Graphics;
 
 public class GooDrop extends Goo { // B
