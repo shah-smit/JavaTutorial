@@ -2,11 +2,13 @@ package simpleobjects;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Random;
 
 public class CustomColorDrop {
 
 	int xpos, ypos, xvel, yvel, size;
 	Color color;
+	Random rd;
 	public CustomColorDrop(int x, int y, int vx, int vy, int sz,Color color){
 		
 		xpos = x;
@@ -15,6 +17,7 @@ public class CustomColorDrop {
 		yvel = vy;
 		size = sz;
 		this.color = color;
+		rd = new Random();
 	}
 	
 	public void move(int width, int height){

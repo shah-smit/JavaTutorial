@@ -22,14 +22,44 @@ public class Drop {
 		ypos = ypos + yvel;
 		
 		if (ypos > height) {
-			ypos = 0;
+			ypos *= -1;
 			xpos = (int)(Math.random() * width);
 		}
+		
+		if (xpos > width) {
+			xpos *= -1;
+			ypos = (int)(Math.random() * height);
+		}
+		
 	}
 	
 	public void draw(Graphics g){
 		
-		g.setColor(Color.GRAY);
+		g.setColor(Color.gray);
+		g.fillOval(xpos, ypos, size, size);
+	}
+
+	public int getX() {
+		// TODO Auto-generated method stub
+		return xpos;
+	}
+	
+	public int getY() {
+		// TODO Auto-generated method stub
+		return ypos;
+	}
+	
+	public int getSize(){
+		return size;
+	}
+	
+	public int getCenter(){
+		int half = size/2;
+		return (xpos+half)+(ypos+half);
+	}
+	
+	public void setColor(Graphics g){
+		g.setColor(Color.GREEN);
 		g.fillOval(xpos, ypos, size, size);
 	}
 }

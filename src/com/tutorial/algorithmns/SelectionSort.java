@@ -2,83 +2,43 @@ package com.tutorial.algorithmns;
 
 public class SelectionSort {
 
-	public static void main(String[] args) {
-		
-		int []numbers = {3,5,2};
-		
-		for(int i = 0; i<numbers.length;i++)
-		{
-			int lowestIndex = searchMinIndex(numbers,i);
-			if(lowestIndex != i)
-			{
-				int temp = numbers[i];
-				numbers[i] = numbers[lowestIndex];
-				numbers[lowestIndex] = temp;	
-			}
-						
-		}			
-		
-		//print out the sorted array
-		for(int i = 0; i<numbers.length;i++)
-		{	
-			System.out.print(numbers[i]+",");
-		}
-		
-		String []names = {"ball","apple","pear","cat"};
-		
-		for(int i = 0; i<names.length;i++)
-		{
-			int lowestIndex = searchMinIndex(names,i);
-			if(lowestIndex != i)
-			{
-				String temp = names[i];
-				names[i] = names[lowestIndex];
-				names[lowestIndex] = temp;	
-			}
-						
-		}			
-		
-		//print out the sorted array
-		for(int i = 0; i<names.length;i++)
-		{	
-			System.out.print(names[i]+",");
-		}
-
-	}
-	
-	static int searchMinIndex(int []numbers, int fromIndex)
-	{
-		int lowestNum = numbers[fromIndex];
-		int lowestIndex = fromIndex;
-	
-		for(int i = fromIndex;i<numbers.length;i++)
-		{
-			if(lowestNum>numbers[i])
-			{
-				lowestNum = numbers[i];
-				lowestIndex = i;
-			}
-	
-		}
-	
-		return lowestIndex;				
-	} 
-	
-	static int searchMinIndex(String []numbers, int fromIndex)
-	{
-		String lowestNum = numbers[fromIndex];
-		int lowestIndex = fromIndex;
-	
-		for(int i = fromIndex;i<numbers.length;i++)
-		{
-			if(lowestNum.compareTo(numbers[i]) > 0)
-			{
-				lowestNum = numbers[i];
-				lowestIndex = i;
-			}
-		}
-	
-		return lowestIndex;				
-	}
-
+	public static void selectionSort(int[] arr){  
+        for (int i = 0; i < arr.length - 1; i++)  
+        {  
+            int index = i;  
+            for (int j = i + 1; j < arr.length; j++){  
+                if (arr[j] < arr[index]){  
+                    index = j;//searching for lowest index  
+                }  
+            }  
+            int smallerNumber = arr[index];   
+            arr[index] = arr[i];  
+            arr[i] = smallerNumber;  
+            printNumbers(arr);
+        }  
+    }  
+       
+    public static void main(String a[]){  
+        int[] arr1 = { 4, 2, 9, 6, 23, 12, 34, 0, 1 };  
+        System.out.println("Before Selection Sort");  
+        for(int i:arr1){  
+            System.out.print(i+" ");  
+        }  
+        System.out.println();  
+          
+        selectionSort(arr1);//sorting array using selection sort  
+         
+        System.out.println("After Selection Sort");  
+        for(int i:arr1){  
+            System.out.print(i+" ");  
+        }  
+    }  
+    
+    private static void printNumbers(int[] input) {
+        
+        for (int i = 0; i < input.length; i++) {
+            System.out.print(input[i] + ", ");
+        }
+        System.out.println("\n");
+    }
 }

@@ -14,28 +14,10 @@ public class InsertionSort {
 			sorted[z] = numbers[i];
 		}
 		
-		//print out the sorted array
 		for(int i = 0; i<numbers.length;i++)
 		{	
 			System.out.print(sorted[i]+",");
 		}
-		
-//		String []names = {"ball","apple","pear","cat"};
-//		String []sortedNames =  new String[3];
-//			
-//		for(int i=0;i<names.length;i++)
-//		{			
-//			int z = findWhereToInsert(names[i],i,sortedNames);
-//			shuffle(z,i-1,sortedNames);
-//			sortedNames[z] = names[i];
-//		}
-//		
-//		//print out the sorted array
-//		for(int i = 0; i<names.length;i++)
-//		{	
-//			System.out.print(sortedNames[i]+",");
-//		}
-
 	} 
 
 	

@@ -18,8 +18,8 @@ int xpos, ypos, xvel, yvel, size;
 	public void move(int width, int height){}
 	
 	public void draw(Graphics g){
-		
-		g.setColor(Color.YELLOW);
+		Color blue = new Color(23, 98, 161);
+		g.setColor(blue);
 		g.fillOval(xpos, ypos, size, size);
 	}
 

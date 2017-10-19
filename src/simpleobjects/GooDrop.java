@@ -14,7 +14,7 @@ public class GooDrop extends Goo { // B
 		int xpos = width/2;
 		int ypos = 0;
 		int xvel = 0;
-		int yvel = 1;
+		int yvel = 10;
 		int size = 10;
 
 		drop = new HalfVerticalBounceDrop(xpos, ypos, xvel, yvel, size); 

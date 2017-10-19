@@ -1,6 +1,7 @@
 package simpleobjects;
 
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class VerticalBounceDrop extends CustomColorDrop {
 	private boolean goUp;
@@ -14,10 +15,12 @@ public class VerticalBounceDrop extends CustomColorDrop {
 	public void move(int width, int height) {
 		
 		if(ypos >= height){
+			Toolkit.getDefaultToolkit().beep();
 			goUp = true;
 		}
 		if(ypos <= 0)
 		{
+			Toolkit.getDefaultToolkit().beep();
 			goUp = false;
 		}
 		

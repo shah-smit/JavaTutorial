@@ -21,7 +21,7 @@ public class CursorGooDrops extends Goo implements MouseMotionListener {
 	public CursorGooDrops(int width, int height) {
 		super(width,height);
 		
-		//while(true)
+		//while(true) 	
 		//{
 			Point pt = MouseInfo.getPointerInfo().getLocation();
 			drop = new StaticDrop((int)pt.getX(),(int)pt.getY(),0,1,10);

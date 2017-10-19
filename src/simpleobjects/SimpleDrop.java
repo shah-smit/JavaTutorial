@@ -25,6 +25,6 @@ public class SimpleDrop {
 	public void draw(Graphics g){ // F
 		
 		g.setColor(Color.GRAY);
-		g.fillOval(xpos, ypos, size, size);
+		g.fillOval(xpos, ypos, size, size+10);
 	}
 }
