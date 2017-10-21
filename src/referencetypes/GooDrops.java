@@ -9,7 +9,7 @@ import goo.Goo;
 public class GooDrops extends Goo {
 
 	private Drop[] drops;
-	private int numDrops, maxSize = 9, maxVel = 9;
+	private int numDrops, maxVel = 9;//maxSize = 9, 
 	private Random random;
 	private GreenDrop greenDrop;
 
@@ -28,7 +28,7 @@ public class GooDrops extends Goo {
 			int xvel = 0;
 			int yvel = 1 + random.nextInt(maxVel);
 			//int size = 1 + random.nextInt(maxSize);
-			drops[i] = makeDrop(xpos, ypos, xvel, yvel, 20);
+			drops[i] = makeDrop(xpos, ypos, xvel, yvel, 30);
 		}
 		
 		greenDrop = new GreenDrop(10,10,5,5,30);
@@ -52,13 +52,14 @@ public class GooDrops extends Goo {
 			
 			if(collision(greenDrop, drops[i])){
 				Toolkit.getDefaultToolkit().beep();
-				drops[i].setColor(g);
+				drops[i].setColor();
 			}
 		}
 	}
 	
 	private boolean collision(Drop a, Drop b){
-		if((a.getCenter() - 10) > b.getCenter() && (a.getCenter() + 10) < b.getCenter()){
+		if(a.getCenter() == b.getCenter()){
+			System.out.println("match");
 			return true;
 		}
 		else{
@@ -80,7 +81,7 @@ public class GooDrops extends Goo {
 
 		int width = 800;
 		int height = 500;
-		int numDrops = 15;
+		int numDrops = 20;
 		GooDrops gd = new GooDrops(width, height, numDrops);
 		
 		gd.smooth();

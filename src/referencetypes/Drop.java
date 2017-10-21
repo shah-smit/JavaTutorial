@@ -6,6 +6,7 @@ import java.awt.Graphics;
 public class Drop {
 
 	protected int xpos, ypos, xvel, yvel, size;
+	protected Color color = Color.GRAY;
 	
 	public Drop(int x, int y, int vx, int vy, int sz){
 		
@@ -24,18 +25,20 @@ public class Drop {
 		if (ypos > height) {
 			ypos *= -1;
 			xpos = (int)(Math.random() * width);
+			color = Color.GRAY;
 		}
 		
 		if (xpos > width) {
 			xpos *= -1;
 			ypos = (int)(Math.random() * height);
+			color = Color.GRAY;
 		}
 		
 	}
 	
 	public void draw(Graphics g){
 		
-		g.setColor(Color.gray);
+		g.setColor(color);
 		g.fillOval(xpos, ypos, size, size);
 	}
 
@@ -58,8 +61,7 @@ public class Drop {
 		return (xpos+half)+(ypos+half);
 	}
 	
-	public void setColor(Graphics g){
-		g.setColor(Color.GREEN);
-		g.fillOval(xpos, ypos, size, size);
+	public void setColor(){
+		color = Color.GREEN;
 	}
 }
