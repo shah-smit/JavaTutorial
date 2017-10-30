@@ -2,7 +2,7 @@
 
 ## Goo Animation
 
-- CO1109 and CO2209 Java and Object Oriented
+- CO1109 and CO2209 Introduction to Object Oriented Java and Graphical OOP
 
 - Compile `Goo` folder before running below files
 
