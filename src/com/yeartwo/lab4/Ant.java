@@ -5,8 +5,8 @@ public class Ant {
 	private int age;
 	
 	public Ant(){
-		height = 1;
-		age = 1;
+		//height = 1; age = 1;
+		this(1,1);
 	}
 	
 	public Ant(int h, int a){
