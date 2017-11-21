@@ -1,8 +1,10 @@
 package abstractclassesandinterfaces;
 
 import java.awt.Graphics;
+import java.util.Random;
 
 public class Polygon extends Shape {
+	Random random;
 
 	public Polygon(int n) {
 

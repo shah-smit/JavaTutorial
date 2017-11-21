@@ -21,8 +21,8 @@ public class App extends Goo {
 		movingObjects = new ArrayList<Moveable>();
 		drawingObjects = new ArrayList<Drawable>();
 		
-		int nVertices = 10;
-		int maxSpeed = 10;
+		int nVertices = 87;
+		int maxSpeed = 5;
 		
 		int width = getWidth();
 		int height = getHeight();
@@ -58,7 +58,6 @@ public class App extends Goo {
 	}
 
 	public void draw(Graphics g) {
-
 		for (Drawable obj : drawingObjects) {
 			obj.draw(g);
 		}

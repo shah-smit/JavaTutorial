@@ -34,4 +34,8 @@ public abstract class Shape implements Drawable{
 		
 		color = c;
 	}
+	
+	public void Draw(Graphics g){
+		
+	}
 }
