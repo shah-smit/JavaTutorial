@@ -4,6 +4,7 @@ Steps:
 - `java Admissions`
 and follow the tests as below:
 
+Smits-MacBook-Pro:Final Check Smit$ rm *.class
 Smits-MacBook-Pro:Final Check Smit$ javac *.java
 Note: AdmissionsFileManager.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
@@ -13,57 +14,57 @@ Testing the read() method with default file student_admissions_file.txt
 ID: 1
 Name: Adrian Mole
 Date Of Birth: 20/01/1980
-Gender: OTHER
+Gender: MALE
 Phone Number: 1237894560
 Email Address: mole@example.com
-Course Applied To: 0
-Qualifications: POTENTIAL
-Tuition Fee Status: OVERSEAS
-Offer Status: PENDING
+Course Applied To: 100211
+Qualifications: ACTUAL
+Tuition Fee Status: HOME
+Offer Status: UNCONDITIONAL
 
 ID: 2
 Name: Some Guy
 Date Of Birth: 31/03/1980
-Gender: OTHER
+Gender: MALE
 Phone Number: 1234567890
 Email Address: guy@example.com
-Course Applied To: 0
-Qualifications: POTENTIAL
+Course Applied To: 100302
+Qualifications: ACTUAL
 Tuition Fee Status: OVERSEAS
-Offer Status: PENDING
+Offer Status: UNCONDITIONAL
 
 ID: 3
 Name: Guy Man
 Date Of Birth: 12/07/1980
-Gender: OTHER
+Gender: MALE
 Phone Number: 0123456789
 Email Address: guy@example.fr
-Course Applied To: 0
+Course Applied To: 100190
 Qualifications: POTENTIAL
-Tuition Fee Status: OVERSEAS
+Tuition Fee Status: HOME
 Offer Status: PENDING
 
 ID: 4
 Name: A Lady
 Date Of Birth: 09/05/1980
-Gender: OTHER
+Gender: FEMALE
 Phone Number: 07798765
 Email Address: al@example.ca
-Course Applied To: 0
+Course Applied To: 100404
 Qualifications: POTENTIAL
 Tuition Fee Status: OVERSEAS
-Offer Status: PENDING
+Offer Status: CONDITIONAL
 
 ID: 5
 Name: Jane Doe
 Date Of Birth: 13/12/1980
-Gender: OTHER
+Gender: FEMALE
 Phone Number: +447000000
 Email Address: jdoe@example.co.uk
-Course Applied To: 0
-Qualifications: POTENTIAL
-Tuition Fee Status: OVERSEAS
-Offer Status: PENDING
+Course Applied To: 100250
+Qualifications: ACTUAL
+Tuition Fee Status: HOME
+Offer Status: UNCONDITIONAL
 
 ID: 6
 Name: Mx Smith
@@ -71,10 +72,10 @@ Date Of Birth: 01/09/1980
 Gender: OTHER
 Phone Number: +331234567
 Email Address: mxsmith@example.fr
-Course Applied To: 0
-Qualifications: POTENTIAL
-Tuition Fee Status: OVERSEAS
-Offer Status: PENDING
+Course Applied To: 100140
+Qualifications: ACTUAL
+Tuition Fee Status: HOME
+Offer Status: UNCONDITIONAL
 
 
 End of test
@@ -103,7 +104,7 @@ Date Of Birth: 20/01/1980
 Gender: MALE
 Phone Number: 1237894560
 Email Address: mole@example.com
-Course Applied To: 0
+Course Applied To: 100211
 Qualifications: ACTUAL
 Tuition Fee Status: HOME
 Offer Status: UNCONDITIONAL
@@ -114,7 +115,7 @@ Date Of Birth: 31/03/1980
 Gender: MALE
 Phone Number: 1234567890
 Email Address: guy@example.com
-Course Applied To: 0
+Course Applied To: 100302
 Qualifications: ACTUAL
 Tuition Fee Status: OVERSEAS
 Offer Status: UNCONDITIONAL
@@ -125,7 +126,7 @@ Date Of Birth: 12/07/1980
 Gender: MALE
 Phone Number: 0123456789
 Email Address: guy@example.fr
-Course Applied To: 0
+Course Applied To: 100190
 Qualifications: POTENTIAL
 Tuition Fee Status: HOME
 Offer Status: PENDING
@@ -229,7 +230,7 @@ Enter gender (male/female/other): MALE
 Enter 6 digit course code (eg. 200203): 200203
 Enter qualifications type (actual, potential): POTENTIAL
 Enter tuition fee rate (home or overseas): HOME
-Enter offer made to prospective student (conditional, unconditional, rejected, or pending. defaults to pending if left blank): RRejected
+Enter offer made to prospective student (conditional, unconditional, rejected, or pending. defaults to pending if left blank): resds
 Invalid offer.
 Enter offer made to prospective student (conditional, unconditional, rejected, or pending. defaults to pending if left blank): Rejected
 Student named 'Smit' added to admissions system with ID 7.
@@ -331,7 +332,7 @@ Date Of Birth: 27/03/1995
 Gender: MALE
 Phone Number: 90902979
 Email Address: shah010@mymail.sim.edu.sg
-Course Applied To: 0
+Course Applied To: 200203
 Qualifications: POTENTIAL
 Tuition Fee Status: HOME
 Offer Status: REJECTED
@@ -447,7 +448,7 @@ Date Of Birth: 27/03/1995
 Gender: MALE
 Phone Number: 90902979
 Email Address: shah010@mymail.sim.edu.sg
-Course Applied To: 0
+Course Applied To: 200203
 Qualifications: POTENTIAL
 Tuition Fee Status: HOME
 Offer Status: REJECTED
@@ -548,7 +549,7 @@ Date Of Birth: 27/03/1995
 Gender: MALE
 Phone Number: 90902979
 Email Address: shah010@mymail.sim.edu.sg
-Course Applied To: 0
+Course Applied To: 200203
 Qualifications: POTENTIAL
 Tuition Fee Status: HOME
 Offer Status: REJECTED
@@ -634,7 +635,7 @@ Date Of Birth: 27/03/1995
 Gender: MALE
 Phone Number: 90902979
 Email Address: shah010@mymail.sim.edu.sg
-Course Applied To: 0
+Course Applied To: 200203
 Qualifications: POTENTIAL
 Tuition Fee Status: HOME
 Offer Status: REJECTED
@@ -724,7 +725,7 @@ Date Of Birth: 27/03/1995
 Gender: MALE
 Phone Number: 90902979
 Email Address: shah010@mymail.sim.edu.sg
-Course Applied To: 0
+Course Applied To: 200203
 Qualifications: POTENTIAL
 Tuition Fee Status: HOME
 Offer Status: REJECTED
@@ -737,10 +738,18 @@ Select one of the following options:
 3) Remove prospective student
 4) View all prospective students
 5) Exit
+3
+Enter Prospective Student ID: 7
+Prospective student 'Smit' (ID 7) has been removed.
+
+UNIVERSITY ADMISSIONS SYSTEM
+Select one of the following options:
+1) Add prospective student
+2) Edit prospective student
+3) Remove prospective student
+4) View all prospective students
+5) Exit
 5
-Save before exiting? y
-Saved.
-Export to text file? y
-Enter file name to export to: final
-Exported.
+Save before exiting? n
 Goodbye.
+Smits-MacBook-Pro:Final Check Smit$
