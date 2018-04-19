@@ -1,5 +1,7 @@
 package com.tutorial.algorithmns;
 
+import java.util.ArrayList;
+
 public class SelectionSort {
 
 	public static void selectionSort(int[] arr){  
@@ -7,7 +9,7 @@ public class SelectionSort {
         {  
             int index = i;  
             for (int j = i + 1; j < arr.length; j++){  
-                if (arr[j] < arr[index]){  
+                if (arr[j] > arr[index]){  
                     index = j;//searching for lowest index  
                 }  
             }  
@@ -19,7 +21,7 @@ public class SelectionSort {
     }  
        
     public static void main(String a[]){  
-        int[] arr1 = { 4, 2, 9, 6, 23, 12, 34, 0, 1 };  
+        int[] arr1 = { 12,52,16,42,88, 88,87 };  
         System.out.println("Before Selection Sort");  
         for(int i:arr1){  
             System.out.print(i+" ");  
@@ -31,7 +33,8 @@ public class SelectionSort {
         System.out.println("After Selection Sort");  
         for(int i:arr1){  
             System.out.print(i+" ");  
-        }  
+        }
+        arraydups(arr1);
     }  
     
     private static void printNumbers(int[] input) {
@@ -40,5 +43,22 @@ public class SelectionSort {
             System.out.print(input[i] + ", ");
         }
         System.out.println("\n");
+    }
+    
+    public static void arraydups(int[] a){
+    	ArrayList<Integer> ai = new ArrayList<>();
+    	
+    	for(int i=0; i<a.length; i++){
+    		boolean found = false;
+    		for(int j=0; j<ai.size(); j++){
+    			if(a[i] == a[j]){
+    				found = true;
+    				break;
+    			}
+    		}
+    		if(!found) ai.add(a[i]);
+    	}
+    	
+    	System.out.println(ai);
     }
 }
