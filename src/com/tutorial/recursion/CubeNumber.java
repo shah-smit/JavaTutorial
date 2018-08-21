@@ -3,7 +3,7 @@ package com.tutorial.recursion;
 public class CubeNumber {
 	public static void main(String[] args)
 	{
-		int answer = cube(4);
+		int answer = cube(2);
 		System.out.println(answer);
 	}
 

@@ -127,14 +127,14 @@ public class MaxHeap {
 
     // test cases
     public static void main(String[] args) {
-        int[] a = new int[]{1,3,2,6,5,4};
+        int[] a = new int[]{12,14,13,15,11,16,19,17,18};
         MaxHeap maxHeap = new MaxHeap(a);
         maxHeap.printHeap();
         maxHeap.buildMaxHeap();
         maxHeap.printHeap();
         maxHeap.extractMax();
         maxHeap.printHeap();
-        maxHeap.insert(12);
-        maxHeap.printHeap();
+//        maxHeap.insert(12);
+//        maxHeap.printHeap();
     }
 }
