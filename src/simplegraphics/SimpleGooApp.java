@@ -8,6 +8,7 @@ public class SimpleGooApp extends SimpleGoo {
 	int x = 70, y = 70;
 	int numFrames = 0;
 
+
 	public SimpleGooApp(int w, int h) {
 		super(w, h);
 	}

@@ -14,7 +14,7 @@ public class RestartableGooWorld extends GooWorld {
 	public void windowClosing(WindowEvent e) {
 
 		try {
-			FileOutputStream fs = new FileOutputStream("gooables.ser");
+			FileOutputStream fs = new FileOutputStream(new File("gooables.ser"));
 			ObjectOutputStream os = null;
 			os = new ObjectOutputStream(fs);
 			os.writeObject(gooables);

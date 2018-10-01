@@ -17,6 +17,10 @@ public class SimpleAnimation {
 	class GooPanel extends JPanel {
 
 		private static final long serialVersionUID = 1L;
+		
+		public void draw(){
+			
+		}
 
 		public void paintComponent(Graphics g) {
 
